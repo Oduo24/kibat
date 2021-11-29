@@ -21,10 +21,13 @@ from inventory import views
 
 
 urlpatterns = [
+    path('index/', views.IndexView, name='IndexView'),
     path('admin/', admin.site.urls),
     path('', include('inventory.urls')),
     path('', include('configuration.urls')),
-    path('index/', views.IndexView, name='IndexView'),
+    path('', include('move.urls')),
+
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

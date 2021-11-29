@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inventory',
     'configuration',
+    'move',
+    'tenant',
+    'charges',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'kibat.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kibat',
+        'NAME': 'kibatpms',
         'USER': 'postgres',
         'PASSWORD': 'ruphinee',
         'HOST': 'localhost',
