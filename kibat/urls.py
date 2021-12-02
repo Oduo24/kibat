@@ -26,6 +26,7 @@ urlpatterns = [
     path('', include('inventory.urls')),
     path('', include('configuration.urls')),
     path('', include('move.urls')),
+    path('', include('charges.urls')),
 
 
 ]
