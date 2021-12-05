@@ -15,12 +15,14 @@ class Charges(models.Model):
         ('Bank', 'Bank'),
         ('Mpesa', 'Mpesa'),
     ]
-    transaction_date = models.DateField
+    user_name = models.ForeignKey('tenant.Tenant', on_delete=models.CASCADE,)
+    unit = models.CharField(max_length=30)
     charge_type = models.CharField(max_length=20, choices=charge_type_choices,)
     posted_by = models.CharField(max_length=30)
-    Customer = models.ForeignKey('tenant.Tenant', on_delete=models.CASCADE,)
-    description = models. CharField(max_length=20, choices=payment_type_choices,)
+    description = models.CharField(max_length=20, choices=payment_type_choices,)
     amount = models.CharField(max_length=30)
+
+
 
 
 
